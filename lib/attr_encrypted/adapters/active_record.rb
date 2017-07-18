@@ -73,7 +73,7 @@ if defined?(ActiveRecord::Base)
             end
 
             define_method("#{attr}_with_dirtiness=") do |value|
-              attribute_will_change!(attr) if value != __send__(attr)
+              # attribute_will_change!(attr) if value != __send__(attr)
               __send__("#{attr}_without_dirtiness=", value)
             end
 
